@@ -1,0 +1,4 @@
+#!/bin/bash
+
+screen /dev/cu.usbserial-210 115200
+# end screen: CTRL+A and CTRL+\ and y

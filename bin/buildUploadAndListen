@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bash bin/buildAndUpload
+bash bin/listenToSerial
