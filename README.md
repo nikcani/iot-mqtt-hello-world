@@ -1,4 +1,5 @@
-# Broker Setup
+# MQTT Hello World
+## Broker Setup
 - Ubuntu 20.04.4
 - https://mosquitto.org/download/#ubuntu
 - /etc/mosquitto/conf.d/
@@ -11,7 +12,7 @@
   - https://mosquitto.org/documentation/authentication-methods
 - sudo service mosquitto restart
 
-# Node-RED Setup
+## Node-RED Setup
 - Install docker: https://docs.docker.com/get-docker/
 - ```bash
   docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
