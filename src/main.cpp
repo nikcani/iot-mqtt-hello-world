@@ -49,7 +49,7 @@ void reconnect() {
         Serial.print("Attempting MQTT connection...");
         if (client.connect("arduinoClient")) {
             Serial.println("connected");
-            client.publish("foo", "bar");
+            client.publish("hello", "world");
             client.subscribe("led");
             client.subscribe("led_red");
             client.subscribe("led_green");
