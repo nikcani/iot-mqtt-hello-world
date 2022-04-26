@@ -17,10 +17,14 @@ void buttonClicked() {
     buttonState = digitalRead(PIN_NO_BUTTON);
 }
 
-void writeForOneSecond(int pin) {
+void writeForX(int pin, int milliseconds) {
     digitalWrite(pin, 1);
-    delay(1000);
+    delay(milliseconds);
     digitalWrite(pin, 0);
+}
+
+void writeForOneSecond(int pin) {
+    writeForX(pin, 1000);
 }
 
 void callback(char *topic, byte *payload, unsigned int length) {
@@ -40,7 +44,7 @@ void callback(char *topic, byte *payload, unsigned int length) {
     } else if (strcmp(topic, "led_green") == 0) {
         writeForOneSecond(PIN_NO_LED_GREEN);
     } else if (strcmp(topic, "buzzer") == 0) {
-        writeForOneSecond(PIN_NO_BUZZER);
+        writeForX(PIN_NO_BUZZER, 100);
     }
 }
 
