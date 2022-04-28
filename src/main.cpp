@@ -51,7 +51,7 @@ void callback(char *topic, byte *payload, unsigned int length) {
 void reconnect() {
     while (!client.connected()) {
         Serial.print("Attempting MQTT connection...");
-        if (client.connect("arduinoClient")) {
+        if (client.connect(SECRET_MQTT_CLIENT_ID)) {
             Serial.println("connected");
             client.publish("hello", "world");
             client.subscribe("led");
